@@ -99,10 +99,10 @@ textarea {
 html {
   background-color: #fff;
   height: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
   padding: 2em;
   font-size: 1em;
   height: 100%;
@@ -115,47 +115,67 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 25px 0;
+}
+
+footer .content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+footer p {
+    margin: 0;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+.intro .part1, .part2 {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.intro .part1 {
+    background: url('../img/Argentina.jpg') center no-repeat #333;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    //background: lightblue;
+}
+
+.intro h1 {
+    color: #001228;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 25px;
 }
 
 .flex-container {	
     display: flex;
-    justify-content: center;
-    /*align-items: center;*/
     flex-flow: row wrap;
+    align-items: flex-start;
     justify-content: space-between;
     font-family: "Montserrat", sans-serif;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: midnightblue;
-    font-size: 2em;
-    background: lightblue;
-}
 .flex-items {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    color: #fff;
-    line-height: 1.5em;
-    font-size: 1.6em;
-    background-color: blueviolet;
-    width: 30%;
+    color: #001228;
+    font-size: 1.25em;
+    background-color: lightblue;
     height: auto;
     padding: 0 1em;
-    flex: flex-grow flex-shrink flex-basis;
-    flex: 1 10 20%;
 }
-
-/*
-.div-1, .div-2, .div-3 {
-  **give the divs a width of 30%, add display:flex, set justify-content and align-items to center**
-  height: auto;
-  padding: 0 1em;
-}*/
-
 
 /* ==========================================================================
    Helper classes
@@ -236,6 +256,37 @@ header {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media only screen and (min-width: 768px) {
+
+.intro h1 {
+    font-size: 2.5em;
+}
+.intro p {
+    font-size: 1.25em;
+}
+
+.flex-items {
+    font-size: 1.5em;
+}
+
+footer .content-wrapper {
+    width: 75%;
+}
+
+footer p, a {
+    font-size: 1.25em;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+footer .content-wrapper {
+    width: 50%;
+}
+.flex-items {
+    flex-basis: 28%;
+}
+}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
